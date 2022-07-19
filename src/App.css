@@ -1,0 +1,15 @@
+.nabvar {
+  padding: 1rem;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+color: black;
+text-decoration: none;
+font-weight: bold;
+}
+.logo{
+  width: 5rem;
+}
