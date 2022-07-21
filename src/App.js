@@ -1,17 +1,19 @@
 
 import './App.css'
-import NavBar from './components/NavBar'
-import 'bootstrap/dist/css/bootstrap.css'
+import NavBarBoots from './components/NavbarBoots';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import NavBarBoots from './components/NavBarBoots';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemListConteiner from './components/ItemListConteiner';
+
+
+
 
 function App() {
   return (
     <div className="App">
       
-      <NavBar/>
       <NavBarBoots/>
-      
+      <ItemListConteiner name="como andas?" />
     </div>
   );
 }
