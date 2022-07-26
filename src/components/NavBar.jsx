@@ -2,7 +2,6 @@
 import './NavBar.css'
 import LogoTienda from '../img/Dynamyte.png'
 import CardWidget from './CardWidget';
-import ItemListConteiner from './ItemListConteiner';
 
 
 
