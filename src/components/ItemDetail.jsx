@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from './ItemCount'
 
 
-const ItemDetail = ({productoA}) => {
+const ItemDetail = ({producto}) => {
 
 
     const onAdd = () => {
@@ -12,11 +12,11 @@ const ItemDetail = ({productoA}) => {
     return(
 
         <div>
-            <h2>Detalle del producto: {productoA.nombre}</h2>
-            <img src= {productoA.imagen} alt= {productoA.nombre}/>
-            <p>{productoA.descripcion}</p>
-            <p className="card-text">disponibles: {stock}</p>
-            <ItemCount stock= {productoA.stock} initial= {1} onAdd= {onAdd}/>
+            <h2>Detalle del producto: {producto.nombre}</h2>
+            <img src= {producto.imagen} alt= {producto.nombre} width={300}/>
+            <p>{producto.descripcion}</p>
+            <p className="card-text">disponibles: {producto.stock}</p>
+            <ItemCount stock= {producto.stock} initial= {1} onAdd= {onAdd}/>
             
         </div>
     )

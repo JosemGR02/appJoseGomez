@@ -5,7 +5,7 @@ import { data } from '../mock/ApiFake'
 
 
 const ItemDetailConteiner = () => {
-    const [productoA, setProductoA] = useState ({})
+    const [producto, setProducto] = useState ({})
 
     const [mensaje, setMensaje] = useState ('') 
 
@@ -14,17 +14,17 @@ const ItemDetailConteiner = () => {
     
     useEffect(() => {
         data
-        .then ((respuesta) => setProductoA(respuesta.find((item) => item.id === "06")))
+        .then ((respuesta) => setProducto(respuesta.find((item) => item.id === "6")))
         .catch (() => setMensaje('hubo un error, intenta de nuevo mas tarde'))
         .finally(()=> setCargando(false))
         
     }, [])
     
-    console.log('productoA',productoA)
+    console.log('producto',producto)
 
     return(
         <div>
-            {cargando ? <p>Cargando...</p> : <ItemDetail producto={productoA}/>}
+            {cargando ? <p>Cargando...</p> : <ItemDetail producto={producto}/>}
             {mensaje && <p>{mensaje}</p>}
         </div>
     )

@@ -1,4 +1,4 @@
-const productos = [
+const producto = [
     {
         id: '1',
         nombre: 'buso nike xl',
@@ -79,7 +79,7 @@ export const data = new Promise((resolve, reject)=>{
 
     setTimeout(()=> {
         if (condicion){
-            resolve(productos)
+            resolve(producto)
         } else {
             reject('salio mal, el producto no se encuentra en stock')
         }
