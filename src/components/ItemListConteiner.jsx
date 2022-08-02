@@ -20,7 +20,7 @@ const ItemListConteiner = (props) => {
 
     return(
         <div>
-            <h1>buenass, {props.name}</h1>
+            <h1>Tienda de ropa {props.name}</h1>
 
             {cargando ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
 

@@ -18,7 +18,7 @@ const Item = ({producto}) => {
                 <p className="card-text">{nombre}</p>
                 <p className="card-text">{descripcion}</p>
                 <p className="card-text">${precio}</p>
-                <p className="card-text">stock: {stock}</p>
+                <p className="card-text">disponibles: {stock}</p>
             </div>
             {mensaje && <p>{mensaje}</p>}
             <ItemCount initial= {1} stock= {stock} onAdd= {onAdd}/>
