@@ -24,7 +24,7 @@ const Item = ({producto}) => {
                 <p className="card-text">disponibles: {stock}</p>
             </div>
             {mensaje && <p>{mensaje}</p>}
-            <ItemCount initial= {1} stock= {stock} onAdd= {onAdd}/>
+            
             <button className='btn btn-primary' onClick={()=> navegar(`/detalle/${producto.id}`)}>Ver mas</button>
         </div>
 
