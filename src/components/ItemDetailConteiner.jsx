@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { data } from '../mock/ApiFake'
+import { useParams } from 'react-router-dom'
 
 
 const ItemDetailConteiner = () => {
@@ -10,11 +11,11 @@ const ItemDetailConteiner = () => {
     const [mensaje, setMensaje] = useState ('') 
 
     const [cargando, setCargando] = useState (true)
-
+    const { id } = useParams()
     
     useEffect(() => {
         data
-        .then ((respuesta) => setProducto(respuesta.find((item) => item.id === "6")))
+        .then ((respuesta) => setProducto(respuesta.find((item) => item.id === id)))
         .catch (() => setMensaje('hubo un error, intenta de nuevo mas tarde'))
         .finally(()=> setCargando(false))
         

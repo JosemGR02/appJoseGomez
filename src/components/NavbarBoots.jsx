@@ -1,36 +1,39 @@
 
 import CardWidget from './CardWidget';
+import { Link } from 'react-router-dom';
 
 const NavBarBoots = () => {
     return (
 
         <nav className="navbar navbar-expand-lg navbar-light  bg-secondary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#"><img src= "/img/Dynamyte.png" width="200px" alt="logo Dynamyte"/></a>
+                <Link className="nav-link" to='/'><img src= "/img/Dynamyte.png" width="200px" alt="logo Dynamyte"/></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/home.html">Home</a>
+                            <Link className="nav-link active" to='/'>home</Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"         data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
+                            <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</p>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="#">de invierno</a></li>
-                            <li><a className="dropdown-item" href="#">de verano</a></li>
+                            <li><Link className="dropdown-item" to='/productos'>Todos los productos</Link></li>
                             <li><hr className="dropdown-divider"/></li>
-                            <li><a className="dropdown-item" href="#">deportes</a></li>
-                            <li><a className="dropdown-item" href="#">moda</a></li>
-                            <li><a className="dropdown-item" href="#">material</a></li>
+                            <li><Link className="dropdown-item" to='/categoria/para-mujer'>para mujer</Link></li>
+                            <li><Link className="dropdown-item" to='/categoria/para-hombre'>para hombre</Link></li>
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><Link className="dropdown-item" to='/'>deportes</Link></li>
+                            <li><Link className="dropdown-item" to='/'>material</Link></li>
+                            <li><Link className="dropdown-item" to='/'>marca</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="./registrarse.html">registrarse</a>
+                            <Link className="nav-link" to='/paginas/registrarse'>registrarse</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="./contactanos.html">Contactanos</a>
+                            <Link className="nav-link" to='/paginas/registrarse'>Contactanos</Link>
                         </li>
                     </ul>
                     <form className="d-flex">

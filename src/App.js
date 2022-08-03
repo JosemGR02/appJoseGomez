@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListConteiner from './components/ItemListConteiner'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemDetailConteiner from './components/ItemDetailConteiner'
+import Home from './paginas/Home'
 
 
 
@@ -15,13 +16,17 @@ function App() {
     <BrowserRouter>
     <NavBarBoots/>
       <Routes>
-        <Route exact path='/' element={<ItemListConteiner name="Dynamyte" />} />
+        <Route path='/' element={<Home/>} />
+        <Route exact path='/productos' element={<ItemListConteiner name="Dynamyte" />} />
+        <Route path='/categoria/:tipocategoria' element={<ItemListConteiner name="Dynamyte" />} />
+        <Route path='/detalle/:id' element={<ItemDetailConteiner/>} />
         
       </Routes>
-      <ItemDetailConteiner/>
+      
     </BrowserRouter>
-
+    
   );
 }
 
 export default App;
+

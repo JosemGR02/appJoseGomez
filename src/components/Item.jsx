@@ -1,6 +1,8 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 const Item = ({producto}) => {
     const [mensaje, setMensaje] = useState (false) 
@@ -9,6 +11,7 @@ const Item = ({producto}) => {
     const onAdd = (cantidad) => {
         setMensaje (`agregaste ${cantidad} productos al carrito`)
     }
+    const navegar = useNavigate()
 
     return(
 
@@ -22,7 +25,7 @@ const Item = ({producto}) => {
             </div>
             {mensaje && <p>{mensaje}</p>}
             <ItemCount initial= {1} stock= {stock} onAdd= {onAdd}/>
-            <button className='btn btn-primary'>Ver mas</button>
+            <button className='btn btn-primary' onClick={()=> navegar(`/detalle/${producto.id}`)}>Ver mas</button>
         </div>
 
     )
