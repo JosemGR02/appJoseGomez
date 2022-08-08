@@ -8,6 +8,7 @@ import ItemListConteiner from './components/ItemListConteiner'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemDetailConteiner from './components/ItemDetailConteiner'
 import Home from './paginas/Home'
+import Carrito from './components/Carrito'
 
 
 
@@ -20,7 +21,7 @@ function App() {
         <Route exact path='/productos' element={<ItemListConteiner name="Dynamyte" />} />
         <Route path='/categoria/:tipocategoria' element={<ItemListConteiner name="Dynamyte" />} />
         <Route path='/detalle/:id' element={<ItemDetailConteiner/>} />
-        
+        <Route path='/carrito' element={<Carrito/>} />
       </Routes>
       
     </BrowserRouter>

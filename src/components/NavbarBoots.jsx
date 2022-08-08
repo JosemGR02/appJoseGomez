@@ -1,6 +1,7 @@
 
-import CardWidget from './CardWidget';
+import CardWidget from './Carrito';
 import { Link } from 'react-router-dom';
+import Carrito from './Carrito';
 
 const NavBarBoots = () => {
     return (
@@ -14,23 +15,23 @@ const NavBarBoots = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" to='/'>home</Link>
+                            <Link className="nav-link active" to='/'>Home</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</p>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><Link className="dropdown-item" to='/productos'>Todos los productos</Link></li>
                             <li><hr className="dropdown-divider"/></li>
-                            <li><Link className="dropdown-item" to='/categoria/para-mujer'>para mujer</Link></li>
-                            <li><Link className="dropdown-item" to='/categoria/para-hombre'>para hombre</Link></li>
+                            <li><Link className="dropdown-item" to='/categoria/para-mujer'>para Mujer</Link></li>
+                            <li><Link className="dropdown-item" to='/categoria/para-hombre'>para Hombre</Link></li>
                             <li><hr className="dropdown-divider"/></li>
-                            <li><Link className="dropdown-item" to='/'>deportes</Link></li>
-                            <li><Link className="dropdown-item" to='/'>material</Link></li>
-                            <li><Link className="dropdown-item" to='/'>marca</Link></li>
+                            <li><Link className="dropdown-item" to='/'>Deportes</Link></li>
+                            <li><Link className="dropdown-item" to='/'>Material</Link></li>
+                            <li><Link className="dropdown-item" to='/'>Marca</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to='/paginas/registrarse'>registrarse</Link>
+                            <Link className="nav-link" to='/paginas/registrarse'>Registrarse</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/paginas/registrarse'>Contactanos</Link>
@@ -47,7 +48,7 @@ const NavBarBoots = () => {
                             <button id="botonregistrar" className= "btn-outline-secondary" type="submit"><a className="nav-link" href="./registrarse.html"><i className="bi bi-person-fill fs-4"></i></a></button>
                         </div>
                         <div>
-                            <button id="botoncarrito" className="btn-outline-secondary" type="submit"><a className="nav-link" href="./carritocompras.html"><CardWidget/></a></button>
+                            <button id="botoncarrito" className="btn-outline-secondary" type="submit"><Link className="nav-link" to='/carrito'><Carrito/></Link></button>
                         </div>
                     </form>
                 </div>
