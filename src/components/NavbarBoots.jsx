@@ -1,9 +1,13 @@
 
-import CardWidget from './Carrito';
+import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
-import Carrito from './Carrito';
+import { useCart } from '../context/CartContext';
 
 const NavBarBoots = () => {
+
+    const {cart} = useCart()
+    console.log({cart})
+
     return (
 
         <nav className="navbar navbar-expand-lg navbar-light  bg-secondary">
@@ -36,6 +40,9 @@ const NavBarBoots = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to='/paginas/registrarse'>Contactanos</Link>
                         </li>
+                        <li>
+                            <CartWidget/>
+                        </li>
                     </ul>
                     <form className="d-flex">
                         <div>
@@ -46,9 +53,6 @@ const NavBarBoots = () => {
                         </div>
                         <div>
                             <button id="botonregistrar" className= "btn-outline-secondary" type="submit"><a className="nav-link" href="./registrarse.html"><i className="bi bi-person-fill fs-4"></i></a></button>
-                        </div>
-                        <div>
-                            <button id="botoncarrito" className="btn-outline-secondary" type="submit"><Link className="nav-link" to='/carrito'><Carrito/></Link></button>
                         </div>
                     </form>
                 </div>
