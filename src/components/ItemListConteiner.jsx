@@ -1,18 +1,32 @@
-import ItemCount from './ItemCount'
+
 import { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import {data} from '../mock/ApiFake'
 import { useParams } from 'react-router-dom'
-const { tipocategoria } = useParams
+//import { collection, getDocs, getFirestore } from "firebase/firestore";
+
 
 const ItemListConteiner = (props) => {
     const [listaProductos, setListaProductos] = useState ([])
     const [mensaje, setMensaje] = useState ('') //
-
     const [cargando, setCargando] = useState (true)
-
     const { tipocategoria } = useParams()
     
+
+
+    /*useEffect(() => {
+        const db = getFirestore();
+    
+        const coleccionProds = collection( db, 'productos')
+        getDocs(coleccionProds)
+        .then((snapshot) => {
+            const data = snapshot.docs.map((doc)=> ({id: doc.id, ...doc.data() }))
+            console.log(data)
+            setItems(data)
+        })
+        .catch((error)=> console.error(error))
+    }, [])*/
+
     useEffect(() => {
         data
         .then ((respuesta) => {

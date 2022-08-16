@@ -11,6 +11,7 @@ const ItemDetail = ({producto}) => {
     
     const [contador, setContador] = useState (0)
     const [compra, setCompra] = useState (false)
+    
     const navegar = useNavigate()
     const {aÑadirAlCart} = useCart()
 
@@ -27,7 +28,9 @@ const ItemDetail = ({producto}) => {
         setCompra (true)
         aÑadirAlCart(prodAcomprar)
     }
+
     const volver = useNavigate()
+
     return(
 
         <div >

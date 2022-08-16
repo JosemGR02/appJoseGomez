@@ -40,13 +40,17 @@ const NavBarBoots = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to='/paginas/registrarse'>Contactanos</Link>
                         </li>
-                        <li>
-                            <CartWidget/>
-                        </li>
                     </ul>
                     <form className="d-flex">
                         <div>
                             <input className="form-control me-2" type="search" placeholder="Buscar productos..."         aria-label="Search"/>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <CartWidget/>
+                                </li>
+                            </ul>
                         </div>
                         <div>
                         <button className="btn btn-outline-secondary" type="submit"><a href="lupa"><i className="bi bi-search fs-4"></i></a></button>
