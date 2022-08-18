@@ -24,15 +24,18 @@ const NavBarBoots = () => {
                         <li className="nav-item dropdown">
                             <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</p>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><Link className="dropdown-item" to='/productos'>Todos los productos</Link></li>
-                            <li><hr className="dropdown-divider"/></li>
-                            <li><Link className="dropdown-item" to='/categoria/para-mujer'>para Mujer</Link></li>
-                            <li><Link className="dropdown-item" to='/categoria/para-hombre'>para Hombre</Link></li>
-                            <li><hr className="dropdown-divider"/></li>
                             <li><Link className="dropdown-item" to='/'>Deportes</Link></li>
+                            <li><hr className="dropdown-divider"/></li>
                             <li><Link className="dropdown-item" to='/'>Material</Link></li>
+                            <li><hr className="dropdown-divider"/></li>
                             <li><Link className="dropdown-item" to='/'>Marca</Link></li>
                             </ul>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/categoria/para-mujer'>para Mujer</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/categoria/para-hombre'>para Hombre</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/paginas/registrarse'>Registrarse</Link>
@@ -54,9 +57,6 @@ const NavBarBoots = () => {
                         </div>
                         <div>
                         <button className="btn btn-outline-secondary" type="submit"><a href="lupa"><i className="bi bi-search fs-4"></i></a></button>
-                        </div>
-                        <div>
-                            <button id="botonregistrar" className= "btn-outline-secondary" type="submit"><a className="nav-link" href="./registrarse.html"><i className="bi bi-person-fill fs-4"></i></a></button>
                         </div>
                     </form>
                 </div>

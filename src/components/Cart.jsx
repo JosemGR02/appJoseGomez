@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext'
 
 const Cart = () => {
     const navegar = useNavigate()
-    const {cart, emptyCart, cartCantTotal} = useCart()
+    const {cart, vaciarCart, cartCantTotal} = useCart()
 
     return (
         <div>
@@ -14,7 +14,7 @@ const Cart = () => {
             <>
                 <h3>El carrito esta vacio!!</h3>
                 <h5>Te invitamos a ver nuestros productos</h5>
-                <button className='btn btn-secondary' onClick={()=> navegar('/productos')}>Ir a Productos</button>
+                <button className='btn btn-secondary' onClick={()=> navegar('/')}>Ir a Productos</button>
             </>
             :
             <>
@@ -23,7 +23,7 @@ const Cart = () => {
                 <span>Total a pagar: $ {cartCantTotal()}</span>
             <div>
                 <button className='btn btn-warning'>Finalizar compra</button>
-                <button className='btn btn-danger' onClick={emptyCart}>Vaciar Productos del carrito</button>
+                <button className='btn btn-danger' onClick={vaciarCart}>Vaciar Productos del carrito</button>
             </div>
             </>
             }

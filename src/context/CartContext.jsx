@@ -7,7 +7,7 @@ export const CartProvider = ({children})=> {
 
     const [cart, setCart] = useState([])
 
-    const aÑadirAlCart = (item) => {
+    const agregarAlCart = (item) => {
         const algoEnCart = cart.find((prod)=> prod.id === item.id)
         if(algoEnCart){
             const actualizarCart = cart.map((prod)=> {
@@ -44,7 +44,7 @@ export const CartProvider = ({children})=> {
     }
 
     return(
-        <CartContext.Provider value={{ cart, aÑadirAlCart, algoEnCart, vaciarCart, removerItem, cartCantTotal, cartCantidad }}>
+        <CartContext.Provider value={{ cart, agregarAlCart, algoEnCart, vaciarCart, removerItem, cartCantTotal, cartCantidad }}>
             {children}
         </CartContext.Provider>
     )
