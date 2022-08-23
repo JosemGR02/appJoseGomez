@@ -2,6 +2,7 @@
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import Categories from './Categories';
 
 const NavBarBoots = () => {
 
@@ -50,11 +51,10 @@ const NavBarBoots = () => {
                         </div>
                         <div>
                             <ul>
-                                <li>
-                                    <CartWidget/>
-                                </li>
+                                <CartWidget/>
                             </ul>
                         </div>
+                        
                         <div>
                         <button className="btn btn-outline-secondary" type="submit"><a href="lupa"><i className="bi bi-search fs-4"></i></a></button>
                         </div>
@@ -66,3 +66,9 @@ const NavBarBoots = () => {
 }
 
 export default NavBarBoots;
+
+/*<div className='collapse navbar-collapse' id='navbar-Example03'>
+<ul className='navbar-nav mr auto'>
+<Categories/>
+</ul>
+</div>*/

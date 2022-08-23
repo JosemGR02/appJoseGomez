@@ -13,8 +13,14 @@ import Cart from './components/Cart'
 
 
 
-
 const App = () => {
+
+  /*useEffect(() => {
+    const subirProds = collection(db, "productos")
+    productos.map((item)=> addDoc(subirProds, item))
+    
+  }, [])*/
+
 
   return (
     <BrowserRouter>

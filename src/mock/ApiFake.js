@@ -1,6 +1,5 @@
 const producto = [
     {
-        id: '1',
         nombre: 'buso nike XL',
         descripcion: "buso hombre",
         precio: 3500,
@@ -9,7 +8,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '2',
         nombre: 'buso adidas L',
         descripcion: "buso hombre",
         precio: 3700,
@@ -18,7 +16,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '3',
         nombre: 'buso volcom M',
         descripcion: "buso hombre",
         precio: 3100,
@@ -27,7 +24,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '4',
         nombre: 'buso dcshoes XXL',
         descripcion: "buso hombre",
         precio: 2900,
@@ -36,7 +32,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '5',
         nombre: 'buso puma S',
         descripcion: "buso hombre",
         precio: 2500,
@@ -45,7 +40,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '6',
         nombre: 'buso thrasher L',
         descripcion: "buso hombre",
         precio: 4000,
@@ -54,7 +48,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '7',
         nombre: 'buso rstst M',
         descripcion: "buso hombre",
         precio: 3000,
@@ -63,7 +56,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '8',
         nombre: 'buso fsdsg XL',
         descripcion: "buso hombre",
         precio: 2600,
@@ -72,7 +64,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '9',
         nombre: 'buso asaas XXL',
         descripcion: "buso hombre",
         precio: 4200,
@@ -81,7 +72,6 @@ const producto = [
         categoria:'para-hombre'
     },
     {
-        id: '10',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -90,7 +80,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '11',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -99,7 +88,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '12',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -108,7 +96,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '13',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -117,7 +104,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '14',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -126,7 +112,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '15',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -135,7 +120,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '16',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -144,7 +128,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '17',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -153,7 +136,6 @@ const producto = [
         categoria:'para-mujer'
     },
     {
-        id: '18',
         nombre: 'buso kakahd M',
         descripcion: "buso mujer",
         precio: 4600,
@@ -163,7 +145,7 @@ const producto = [
     }
 ]
 
-export const data = new Promise((resolve, reject)=>{
+/*export const data = new Promise((resolve, reject)=>{
 
     let condicion = true
 
@@ -174,4 +156,4 @@ export const data = new Promise((resolve, reject)=>{
             reject('salio mal, el producto no se encuentra en stock')
         }
     }, 2000)
-})
+})*/
