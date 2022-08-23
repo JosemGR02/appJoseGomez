@@ -2,7 +2,8 @@ import React from 'react'
 import {collection, addDoc, serverTimestamp} from 'firebase/firestore'
 import { db } from '../firebase/Firebase'
 import { useCart } from '../context/CartContext'
-import swal from 'sweetalert'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import { useState} from 'react'
 
 export const CheckOut = () => {
     const [comprador, setComprador] = useState({})
@@ -69,4 +70,3 @@ export const CheckOut = () => {
 }
 export default CheckOut
 
-//

@@ -10,7 +10,7 @@ const ItemListConteiner = (props) => {
     const [listaProductos, setListaProductos] = useState ([])
     const [mensaje, setMensaje] = useState ('') //
     const [cargando, setCargando] = useState (true)
-    const { categoria } = useParams()
+    const { id } = useParams()
     
     
 
@@ -34,10 +34,10 @@ const ItemListConteiner = (props) => {
 
 
     useEffect(() => {
-        if (categoria){
+        if ( id ){
             const db = getFirestore();
     
-            const coleccionQuery = query(collection( db, 'productos'), where('categoria', '==', categoria))
+            const coleccionQuery = query(collection( db, 'productos'), where('categoria', '==', id))
             setCargando(true)
             getDocs(coleccionQuery)
             .then((snapshot) => {
@@ -48,7 +48,7 @@ const ItemListConteiner = (props) => {
             .catch((error)=> console.error(error))
             .finally(()=> setCargando(false))
         }
-    }, [categoria])
+    }, [ id ])
     
 
     return(

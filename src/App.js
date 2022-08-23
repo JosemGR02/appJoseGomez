@@ -10,6 +10,7 @@ import ItemDetailConteiner from './components/ItemDetailConteiner'
 import CartWidget from './components/CartWidget'
 import { CartProvider } from './context/CartContext'
 import Cart from './components/Cart'
+import CheckOut from './components/CheckOut'
 
 
 
@@ -28,9 +29,11 @@ const App = () => {
         <NavBarBoots/>
         <Routes>
           <Route path='/' element={<ItemListConteiner name="Dynamyte" />} />
-          <Route path='/categoria/:categoria' element={<ItemListConteiner name="Dynamyte" />} />
+          <Route path='/categoria/:id' element={<ItemListConteiner name="Dynamyte" />} />
           <Route path='/detalle/:id' element={<ItemDetailConteiner/>} />
           <Route path='/carrito' element={<Cart/>}/>
+          <Route path='/checkout' element={<CheckOut/>}/>
+
         </Routes>
       </CartProvider>
     </BrowserRouter>
