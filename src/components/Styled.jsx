@@ -1,5 +1,5 @@
 /*ESTYLED COMPONENTS REACT*/
-import styled, {css, createGlobalStyle} from 'styled-components';
+import styled, {css, createGlobalStyle} from 'styled-components'
 
 
 
@@ -20,34 +20,134 @@ export const GlobalStyle = createGlobalStyle`
 
 //ESTILOS LOCALES
 
-export const FooterSt = styled.footer`
+
+
+//Footer
+
+export const FooterSt = styled.div`
     width: 100%;
     height: 100px;
     display: flex;
-    justifyContent: center;
-    backgroundColor: black;
+    justify-content: center;
+    background-color: darkslategrey ;
     color: white;
-    fontFamily: arial;
+    font-family: arial;
+    font-size: 2rem;
 `;
 export const Redes = styled.div`
-    display: inlineBlock;
-    fontSize: 30px;
-    textAlign: center;
-    marginLeft: 5px;
-    marginRight: 5px';
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
     color: white;
 `;
+
 export const Rotate = styled.div`
     width: 60px,
     height: 60px;
     margin: 5px auto;
-    display: inlineBlock;
+    display: inline-block;
     fontSize: 30px;
-    textAlign: center;
-    marginLeft: 5px;
-    marginRight: 5px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
     color: white;
 `;
+
+
+// itemDetail
+
+export const ContenItemD = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+//paginacion
+
+export const ContenPaginacion = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 80px;
+`;
+
+//itemDetailContainer
+
+//carroucel
+
+//contactanos
+
+//itemlistContainer
+
+export const ContenCarrucel = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: -80px;
+    margin-top: 40px;
+`;
+
+
+//itemlist
+
+export const ContenedorIL = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direccion: row;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+//item
+
+export const ContenItem = styled.div`
+    margin-bottom: -2rem;
+    margin-top: 12rem;
+    width: 16rem;
+    margin: 2rem;
+`;
+
+//itemCount 
+
+//cartItem
+
+//checkout
+
+//cart
+
+export const ContenVacio = styled.div`
+    display: flex;
+    flex-direccion: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 100px;
+    heigth: 100vh;
+`;
+
+
+export const ContenBotonCart = styled.div`
+    display: flex;
+    flex-direccion: row;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+`;
+
+
+
+//favorites
+
+//favItems
+
+//pagError
+
+//validador
+
+
 
 
 /*
@@ -89,26 +189,29 @@ export const NotFound = styled.body`
     background-color:#ebecea;
     height: 100vh;
 `;
-export const contenedor = styled.div`
+export const ContenPE = styled.div`
 
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
     height: 100vh;
+    margin-top: 10px;
 `;
-export const imagen = styled.img`
+export const ImagenPE = styled.img`
 
     width: 50%;
+    marginBottom: 15px;
 }
 `;
-export const titulo = styled.h1`
+export const TituloPE = styled.h1`
 
-    color:rgb(4, 5, 48);
+    color: rgb(4, 5, 48);
     font-size: 25px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: Bebas Neue, cursive;
     padding: 20px;
     margin-block-end: -3rem;
+    margin-bottom: 10px;
 
     ${media} {
         h1{
@@ -117,15 +220,16 @@ export const titulo = styled.h1`
     }
 }
 `;
-export const boton = styled.button`
+export const BotonPE = styled.button`
 
     padding: 15px 35px;
     border-radius: 15px;
     border: none;
-    color:rgb(4, 5, 48);
+    color: rgb(4, 5, 48);
     background: rgb(27, 134, 184);
-    font-family: 'Bebas Neue', cursive;
+    font-family: Bebas Neue, cursive;
     font-size: 18px;
+    margin-bottom: 30px;
 
     ${media} {
         button{
@@ -134,10 +238,6 @@ export const boton = styled.button`
     }
 }
 `;
-
-
-
-
 
 
 

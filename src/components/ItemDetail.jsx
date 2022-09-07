@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { useCart } from '../context/CartContext'
-
+import { ContenItemD } from './Styled'
 import { FaBookmark } from 'react-icons/fa'
 import { FaRegBookmark } from 'react-icons/fa'
 
@@ -43,7 +43,7 @@ const ItemDetail = ({producto}) => {
 
     return(
 
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <ContenItemD>
             <h2 style={{marginBottom: '30px'}}>Detalle del producto: {nombre}</h2>
             <img style={{marginBottom: '10px'}} src= {imagen} alt= {nombre} width={350}/>
             <p>id:{id}</p>
@@ -65,7 +65,7 @@ const ItemDetail = ({producto}) => {
             </div>
             : <ItemCount stock= {stock} initial= {1} onAdd= {onAdd} contador={contador} setContador={setContador}/>}
             
-        </div>
+        </ContenItemD>
     )
 }
 

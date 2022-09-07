@@ -7,6 +7,7 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 import Carrucel from './Carrucel'
 import { Cargando } from './Cargando'
 import { Paginación } from './Paginación'
+import { ContenCarrucel } from './Styled'
 
 
 const ItemListConteiner = (props) => {
@@ -56,9 +57,14 @@ const ItemListConteiner = (props) => {
 
     return(
         <div>
-            <h1>Tienda de ropa {props.name}</h1>
-            <Carrucel/>
-
+            <h1 style={{ textAlign: 'center', marginTop: '40px', marginBottom: '100px'}}>Tienda de ropa {props.name}</h1>
+            <h2 style={{ textAlign: 'center', marginTop: '40px', marginBottom: '50px'}}>Promociones 40% OFF</h2>
+            <ContenCarrucel>
+                <Carrucel/>
+            </ContenCarrucel>
+            <div>
+                <h2 style={{ textAlign: 'center', marginTop: '200px', marginBottom: '-40px'}}>Todos los Productos</h2>
+            </div>
             {cargando ? <Cargando/> : <ItemList listaProductos={listaProductos}/>}
             {mensaje && <p>{mensaje}</p>}
             <Paginación/>

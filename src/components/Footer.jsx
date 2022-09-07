@@ -4,7 +4,7 @@ import { FaFacebook } from 'react-icons/fa'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { FaInstagram } from 'react-icons/fa'
 import { FaWhatsapp } from 'react-icons/fa'
-import { FooterSt, Redes } from './styled/Styled'
+import { FooterSt, Redes, Rotate} from './Styled'
 //import { Link } from 'react-router-dom';
 
 
@@ -12,20 +12,19 @@ const Footer = () => {
 
     return(
         <div>
-            <FooterSt style={{width: '100%', height: '100px', display: 'flex', justifyContent: 'center',
-                backgroundColor: 'black', color: 'white', fontFamily: 'arial'}}>
+            <FooterSt>
                 <Redes>
-                    <div className='rotate'>
-                        <a href="https://www.facebook.com/" target="_blank"><FaFacebook style={{ color: 'blue', fontSize: '2em'}}/></a>
-                    </div>
-                    <div className='rotate'>
-                        <a href="https://www.instagram.com/" target="_blank"><FaInstagram style={{ color: 'violet', fontSize: '2em'}}/></a>
-                    </div>
-                    <div className='rotate' style={{transition: 'all 1s ease'}}>
-                        <a href="https://www.whatsapp.com/" target="_blank"><FaWhatsapp style={{ color: 'green', fontSize: '2em'}}/> </a>
-                    </div>
-                    <a href=""><BsFillTelephoneFill style={{ fontSize: '1.5em', color: 'black'}}/>6833936727</a> <br/>
-                    <a href="https://mail.google.com/" target="_blank"><FaRegEnvelope style={{fontSize: '1.8em', color: 'red'}}/>email:tiendaDynamyte04@gmail.com</a>
+                    <Rotate>
+                        <a href="https://www.facebook.com/" target="_blank"><FaFacebook style={{ color: 'blue'}}/></a>
+                    </Rotate>
+                    <Rotate>
+                        <a href="https://www.instagram.com/" target="_blank"><FaInstagram style={{ color: 'crimson'}}/></a>
+                    </Rotate>
+                    <Rotate style={{transition: 'all 1s ease'}}>
+                        <a href="https://www.whatsapp.com/" target="_blank"><FaWhatsapp style={{ color: 'green'}}/> </a>
+                    </Rotate>
+                    <a href="" style={{color: 'black'}}><BsFillTelephoneFill style={{ fontSize: '-6em', color: 'black', textDecoration: 'none'}}/>6833936727</a> <br/>
+                    <a href="https://mail.google.com/" target="_blank" style={{color: 'black'}}><FaRegEnvelope style={{fontSize: '-1em', color: 'red'}}/>email:tiendaDynamyte04@gmail.com</a>
                 </Redes> <br/> <br/> <br/>
                 <div>
                     <h4>

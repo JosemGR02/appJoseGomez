@@ -16,23 +16,14 @@ import Contactanos from './components/Contactanos'
 import Favorites from './components/Favorites'
 import PagError from './components/PagError'
 import Favoritos from './components/Favoritos'
-import productos from './mock/ApiFake'
 
-import { db } from './firebase/Firebase'
-import { collection, addDoc } from 'firebase/firestore'
-import { useEffect} from 'react'
+
+
 
 
 
 const App = () => {
-/*
-  useEffect(() => {
 
-    const subirProds = collection(db, "productos")
-    productos.map((item)=> addDoc(subirProds, item))
-    
-  }, [])
-  */
 
   return (
     <BrowserRouter>
@@ -56,6 +47,27 @@ const App = () => {
 }
 
 export default App;
+
+
+
+
+
+
+/*
+
+import productos from './mock/ApiFake'
+import { db } from './firebase/Firebase'
+import { collection, addDoc } from 'firebase/firestore'
+import { useEffect} from 'react'
+
+  useEffect(() => {
+
+    const subirProds = collection(db, "productos")
+    productos.map((item)=> addDoc(subirProds, item))
+    
+  }, [])
+  */
+
 
 /*
 import { Cuadrado, Rectangulo, Component, Input, RedText, BlueText} from './components/Styled'<Cuadrado classname="Cuadrado"/>

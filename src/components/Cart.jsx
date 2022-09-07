@@ -4,6 +4,8 @@ import CartItem from './CartItem'
 import { useCart } from '../context/CartContext'
 import cartEmpty from '../assets/imagenes/cartEmpty.webp'
 import images from '../assets/imagenes/images.png'
+import { ContenBotonCart } from './Styled'
+import { ContenVacio } from './Styled'
 
 const Cart = () => {
     const navegar = useNavigate()
@@ -14,12 +16,12 @@ const Cart = () => {
             {!cart.length 
             ?
             <>
-                <div style={{display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center', height: '100vh'}}>
-                    <h2 style={{marginBottom: '20px'}}>El carrito esta vacio!!</h2>
-                    <img src= {cartEmpty} alt="" style={{width: '100'}}/>
-                    <h4>Te invitamos a ver nuestros productos</h4>
+                <ContenVacio style={{display: 'flex', flexDirection: 'column'}}>
+                    <h1 style={{marginBottom: '60px', marginTop: '40px'}}>El carrito esta vacio!!</h1>
+                    <img src= {cartEmpty} alt="" style={{width: '100', marginBottom: '20px'}}/>
+                    <h4 style={{marginBottom: '10px', marginTop: '10px'}}>Te invitamos a ver nuestros productos</h4>
                     <button style={{ padding: '15px 35px', borderRadius: '15px', border: 'none', color: 'rgb(4, 5, 48)', background: 'rgb(27, 134, 184)', fontFamily: 'Bebas Neue', fontSize: '20px'}} className='btn btn-primary' onClick={()=> navegar('/')}>Ir a Productos</button>
-                </div>
+                </ContenVacio>
             </>
             :
             <>
@@ -27,10 +29,10 @@ const Cart = () => {
                 {cart.map((item)=> <CartItem key={item.id} item={item}/>)}
                 <span style={{display: 'flex', justifyContent: 'center'}}>Total a pagar: $ {cartCantTotal()}</span>
 
-            <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', gap: '30px', marginBottom: '20px', marginTop: '30px'}}>
+            <ContenBotonCart>
                 <button className='btn btn-warning' onClick={()=> navegar('/checkout')}>Finalizar compra</button>
                 <button className='btn btn-danger' onClick={vaciarCart}>Vaciar Productos del carrito</button>
-            </div>
+            </ContenBotonCart>
 
             <div>
                 <h3 style={{display: 'flex', justifyContent: 'center'}}>Metodos de Pago</h3>
@@ -49,6 +51,29 @@ export default Cart
 
 
 /* 
+
+
+
+
+<div style={{display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center', height: '100vh', marginBottom: '100px'}}>
+                    <h1 style={{marginBottom: '60px', marginTop: '40px'}}>El carrito esta vacio!!</h1>
+                    <img src= {cartEmpty} alt="" style={{width: '100', marginBottom: '20px'}}/>
+                    <h4 style={{marginBottom: '10px', marginTop: '10px'}}>Te invitamos a ver nuestros productos</h4>
+                    <button style={{ padding: '15px 35px', borderRadius: '15px', border: 'none', color: 'rgb(4, 5, 48)', background: 'rgb(27, 134, 184)', fontFamily: 'Bebas Neue', fontSize: '20px'}} className='btn btn-primary' onClick={()=> navegar('/')}>Ir a Productos</button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 TABLAAA
 
 import Table from 'react-bootstrap/Table';

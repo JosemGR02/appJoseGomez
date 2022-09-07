@@ -1,11 +1,11 @@
 import React from 'react'
-import Pagination from 'react-bootstrap/Pagination';
-
+import Pagination from 'react-bootstrap/Pagination'
+import { ContenPaginacion } from './Styled'
 
 
 export function Paginación() {
     return (
-        <div style={{display: 'flex', justifyContent: 'center', marginBottom: '30px'}}>
+        <ContenPaginacion>
             <Pagination>
                 <Pagination.Prev />
                 <Pagination.Item active>{1}</Pagination.Item>
@@ -15,8 +15,8 @@ export function Paginación() {
                 <Pagination.Item>{5}</Pagination.Item>
                 <Pagination.Next />
             </Pagination>
-        </div>
+        </ContenPaginacion>
 );
 }
 
-export default Paginación;
+export default Paginación

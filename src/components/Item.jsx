@@ -18,8 +18,7 @@ const Item = ({ producto }) => {
             </div>
             <button className='btn btn-primary' onClick={() => navegar(`/detalle/${producto.id}`)}>Ver mas</button>
         </div>
-
     )
 }
 
-export default Item 
+export default Item;
