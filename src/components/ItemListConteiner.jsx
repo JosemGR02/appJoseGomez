@@ -1,9 +1,12 @@
 
+import React from 'react'
 import { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import {data} from '../mock/ApiFake'
 import { useParams } from 'react-router-dom'
-import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import Carrucel from './Carrucel'
+import { Cargando } from './Cargando'
+import { Paginación } from './Paginación'
 
 
 const ItemListConteiner = (props) => {
@@ -54,14 +57,16 @@ const ItemListConteiner = (props) => {
     return(
         <div>
             <h1>Tienda de ropa {props.name}</h1>
+            <Carrucel/>
 
-            {cargando ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
-
+            {cargando ? <Cargando/> : <ItemList listaProductos={listaProductos}/>}
             {mensaje && <p>{mensaje}</p>}
+            <Paginación/>
         </div>
     )
 }
 
 export default ItemListConteiner;
 
+//<p>Cargando...</p>
 

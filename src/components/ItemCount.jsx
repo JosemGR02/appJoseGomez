@@ -17,12 +17,15 @@ const ItemCount = ({ stock, onAdd, contador, setContador }) => {
 
     return(
         <>
-            <div>
+            <div style={{ gap: '10px'}}>
                 <button className='btn btn-danger' onClick={restar}> - </button>
                 <span>{contador}</span>
                 <button className='btn btn-success' onClick={sumar}> + </button>
             </div>
-            <button className='btn btn-dark' disabled={contador === 0} onClick={onAdd}>Comprar</button>
+            <div style={{ marginTop: '20px', marginBottom: '40px'}}>
+                <button style={{ padding: '10px 20px'}} className='btn btn-dark' disabled={contador === 0} onClick={onAdd}>Comprar</button>
+            </div>
+            
         </>
     )
 }

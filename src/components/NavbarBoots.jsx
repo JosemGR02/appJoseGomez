@@ -1,8 +1,11 @@
 
-import CartWidget from './CartWidget';
-import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import Categories from './Categories';
+import React from 'react'
+import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
+import Favoritos from "./Favoritos"
+import { HiSearch } from "react-icons/hi"
+
 
 const NavBarBoots = () => {
 
@@ -25,11 +28,13 @@ const NavBarBoots = () => {
                         <li className="nav-item dropdown">
                             <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</p>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><Link className="dropdown-item" to='/'>Deportes</Link></li>
+                            <li><Link className="dropdown-item" to='/'>Busos</Link></li>
                             <li><hr className="dropdown-divider"/></li>
-                            <li><Link className="dropdown-item" to='/'>Material</Link></li>
+                            <li><Link className="dropdown-item" to='/'>Remeras</Link></li>
                             <li><hr className="dropdown-divider"/></li>
-                            <li><Link className="dropdown-item" to='/'>Marca</Link></li>
+                            <li><Link className="dropdown-item" to='/'>Pantalones</Link></li>
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><Link className="dropdown-item" to='/'>Shorts</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
@@ -42,21 +47,18 @@ const NavBarBoots = () => {
                             <Link className="nav-link" to='/paginas/registrarse'>Registrarse</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to='/paginas/registrarse'>Contactanos</Link>
+                            <Link className="nav-link" to='/contactanos'>Contactanos</Link>
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <div>
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginLeft: '15px', marginRight: '10px'}}>
                             <input className="form-control me-2" type="search" placeholder="Buscar productos..."         aria-label="Search"/>
-                        </div>
-                        <div>
-                            <ul>
-                                <CartWidget/>
-                            </ul>
+                            <HiSearch style={{ fontSize: '1.8em'}}/>
                         </div>
                         
-                        <div>
-                        <button className="btn btn-outline-secondary" type="submit"><a href="lupa"><i className="bi bi-search fs-4"></i></a></button>
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginLeft: '15px', marginRight: '10px'}}>
+                            <Favoritos/>
+                            <CartWidget/>
                         </div>
                     </form>
                 </div>
@@ -67,8 +69,3 @@ const NavBarBoots = () => {
 
 export default NavBarBoots;
 
-/*<div className='collapse navbar-collapse' id='navbar-Example03'>
-<ul className='navbar-nav mr auto'>
-<Categories/>
-</ul>
-</div>*/

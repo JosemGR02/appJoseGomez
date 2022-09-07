@@ -4,27 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore';
+import { GlobalStyle } from './components/Styled';
+
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDw4CEudBstJGihfWOI0k5ssz9oB8WFVUU",
-    authDomain: "ecommence-proyecto-joseg.firebaseapp.com",
-    projectId: "ecommence-proyecto-joseg",
-    storageBucket: "ecommence-proyecto-joseg.appspot.com",
-    messagingSenderId: "825687188508",
-    appId: "1:825687188508:web:f1e09f8bdd428ea7a0ebd9"
+    apiKey: process.env.REACT_APP_APPI_KEY,
+    authDomain: process.env.REACT_APP_auth_Domain,
+    projectId: process.env.REACT_APP_project_Id,
+    storageBucket: process.env.REACT_APP_storage_Bucket,
+    messagingSenderId: process.env.REACT_APP_messaging_Sender_Id,
+    appId: process.env.REACT_APP_app_Id
 };
 
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    
-    <App />
-
+    <div>
+        <GlobalStyle/>
+        <App/>
+    </div>  
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+

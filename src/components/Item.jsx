@@ -1,29 +1,20 @@
 import React from 'react'
-import ItemCount from './ItemCount'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
 const Item = ({ producto }) => {
 
-    const { imagen, nombre, descripcion, precio, stock, } = producto
-
-    const [mensaje, setMensaje] = useState ('') 
-    
-    const onAdd = (cantidad) => {
-        setMensaje(`agregaste ${cantidad} productos al carrito`)
-    }
+    const { imagen, nombre, descripcion, precio } = producto
     const navegar = useNavigate()
 
     return (
 
-        <div className="card" style={{ width: '18rem', margin: '5rem' }}>
-            <img src={imagen} className="card-img-top" alt={nombre} />
+        <div className="card" style={{ width: '16rem', margin: '2rem', marginTop: '12rem', marginBottom: '-2rem'}}>
+            <img style={{ width: '16rem', height: '18rem'}} src={imagen} className="card-img-top" alt={nombre} />
             <div className="card-body">
                 <p className="card-text">{nombre}</p>
                 <p className="card-text">{descripcion}</p>
                 <p className="card-text">${precio}</p>
-                <p className="card-text">disponibles: {stock}</p>
             </div>
             <button className='btn btn-primary' onClick={() => navegar(`/detalle/${producto.id}`)}>Ver mas</button>
         </div>
