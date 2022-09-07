@@ -7,9 +7,9 @@ export const CartItem = ({item}) => {
     return (
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', padding: '1.5rem', marginLeft: '-5rem'}}>
             <img src={item.imagen} alt={item.nombre} style={{width: '170px', height: '140px'}}/>
-            <span>{item.nombre}</span>
-            <span>${item.precio}</span>
-            <span>{item.cantidad}</span>
+            <h5 style={{ fontFamily: 'Roboto Condensed'}}>{item.nombre}</h5>
+            <h5 style={{ fontFamily: 'Roboto Condensed'}}>${item.precio}</h5>
+            <h5 style={{ fontFamily: 'Roboto Condensed'}}>{item.cantidad}</h5>
             <button className='btn btn-dark' onClick={()=>removerItem(item.id)}><FaTrashAlt style={{ fontSize: '1.5em'}}/></button>
         </div>
     )

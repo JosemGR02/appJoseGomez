@@ -27,10 +27,10 @@ const Footer = () => {
                     <a href="https://mail.google.com/" target="_blank" style={{color: 'black'}}><FaRegEnvelope style={{fontSize: '-1em', color: 'red'}}/>email:tiendaDynamyte04@gmail.com</a>
                 </Redes> <br/> <br/> <br/>
                 <div>
-                    <h4>
+                    <h5>
                         Nosotros - Quiénes somos - Contacto - Sucursales - Trabajá con nosotros <br/>
                         Productos - ¿Cómo comprar? - Ernesto Moreno 4321, Rosario, Santa fe.
-                    </h4>
+                    </h5>
                 </div>
                 <div>
                     <h6>© Tienda Dynamyte.com 2022 - all rights reserved</h6>

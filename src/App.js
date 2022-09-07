@@ -21,7 +21,6 @@ import Favoritos from './components/Favoritos'
 
 
 
-
 const App = () => {
 
 
@@ -69,10 +68,4 @@ import { useEffect} from 'react'
   */
 
 
-/*
-import { Cuadrado, Rectangulo, Component, Input, RedText, BlueText} from './components/Styled'<Cuadrado classname="Cuadrado"/>
-        <Rectangulo classname="Rectangulo"/>
-        <Component isRigth={true}>aaaaa</Component>
-        <RedText>ggggg</RedText>
-        <BlueText>fffff</BlueText>
-        <Input maxLength={50}/> */
+

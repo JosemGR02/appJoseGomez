@@ -44,11 +44,11 @@ const ItemDetail = ({producto}) => {
     return(
 
         <ContenItemD>
-            <h2 style={{marginBottom: '30px'}}>Detalle del producto: {nombre}</h2>
+            <h1 style={{marginBottom: '30px', fontFamily: 'Tiro Devanagari Hindi' }}>Detalle del producto: {nombre}</h1>
             <img style={{marginBottom: '10px'}} src= {imagen} alt= {nombre} width={350}/>
-            <p>id:{id}</p>
-            <p>{descripcion}</p>
-            <p>${precio}</p>
+            <p style={{ fontFamily: 'Roboto Condensed'}}>id:{id}</p>
+            <p style={{ fontFamily: 'Roboto Condensed'}}>{descripcion}</p>
+            <p style={{ fontFamily: 'Roboto Condensed'}}>${precio}</p>
             { guardado ? 
             <button>
                 <FaBookmark style={{ fontSize: '1.5em'}}/>

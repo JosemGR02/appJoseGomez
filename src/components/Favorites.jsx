@@ -18,7 +18,7 @@ const Cart = () => {
             ?
             <>
                 <div style={{display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center', height: '100vh'}}>
-                    <h3 style={{marginBottom: '20px'}}>Favoritos esta vacio!!</h3>
+                    <h1 style={{marginBottom: '20px', fontFamily: 'Tiro Devanagari Hindi' }}>Favoritos esta vacio!!</h1>
                     <FiStar style={{ fontSize: '5em'}}/>
                     <h5>Te invitamos a ver nuestros productos</h5>
                     <button style={{ padding: '15px 35px', borderRadius: '15px', border: 'none', color: 'rgb(4, 5, 48)', background: 'rgb(27, 134, 184)', fontFamily: 'Bebas Neue', fontSize: '18px'}} className='btn btn-primary' onClick={()=> navegar('/')}>Ir a Productos</button>
@@ -27,9 +27,9 @@ const Cart = () => {
             :
             <>
             <div>
-                <h3 style={{display: 'flex', justifyContent: 'center'}}>Favoritos 
+                <h1 style={{display: 'flex', justifyContent: 'center', fontFamily: 'Tiro Devanagari Hindi'}}>Favoritos 
                 <AiFillStar style={{ fontSize: '1.5em'}}/>
-                </h3>
+                </h1>
                 {favoritos.map((item)=> <CartItem key={item.id} item={item}/>)}
                 <button className='btn btn-danger' onClick={vaciarFav}>Vaciar Productos de Favoritos</button>
             </div>

@@ -57,13 +57,13 @@ const ItemListConteiner = (props) => {
 
     return(
         <div>
-            <h1 style={{ textAlign: 'center', marginTop: '40px', marginBottom: '100px'}}>Tienda de ropa {props.name}</h1>
-            <h2 style={{ textAlign: 'center', marginTop: '40px', marginBottom: '50px'}}>Promociones 40% OFF</h2>
+            <h1 style={{ textAlign: 'center', marginTop: '40px', marginBottom: '100px', fontFamily: 'Tiro Devanagari Hindi'}}>Tienda de ropa {props.name}</h1>
+            <h2 style={{ textAlign: 'center', marginTop: '40px', marginBottom: '50px', fontFamily: 'Tiro Devanagari Hindi'}}>Promociones 40% OFF</h2>
             <ContenCarrucel>
                 <Carrucel/>
             </ContenCarrucel>
             <div>
-                <h2 style={{ textAlign: 'center', marginTop: '200px', marginBottom: '-40px'}}>Todos los Productos</h2>
+                <h2 style={{ textAlign: 'center', marginTop: '200px', marginBottom: '-40px', fontFamily: 'Tiro Devanagari Hindi'}}>Todos los Productos</h2>
             </div>
             {cargando ? <Cargando/> : <ItemList listaProductos={listaProductos}/>}
             {mensaje && <p>{mensaje}</p>}

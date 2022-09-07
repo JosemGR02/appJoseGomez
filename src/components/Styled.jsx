@@ -1,8 +1,5 @@
 /*ESTYLED COMPONENTS REACT*/
-import styled, {css, createGlobalStyle} from 'styled-components'
-
-
-
+import styled, { createGlobalStyle } from 'styled-components'
 
 
 //ESTILOS GLOBALES
@@ -17,9 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 
-
 //ESTILOS LOCALES
-
 
 
 //Footer
@@ -74,11 +69,6 @@ export const ContenPaginacion = styled.div`
     margin-top: 80px;
 `;
 
-//itemDetailContainer
-
-//carroucel
-
-//contactanos
 
 //itemlistContainer
 
@@ -110,7 +100,6 @@ export const ContenItem = styled.div`
     margin: 2rem;
 `;
 
-//itemCount 
 
 //cartItem
 
@@ -142,40 +131,6 @@ export const ContenBotonCart = styled.div`
 //favorites
 
 //favItems
-
-//pagError
-
-//validador
-
-
-
-
-/*
-export const NotFound = styled.body`
-
-    display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
-`;
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // pagNotFound 404
@@ -239,66 +194,16 @@ export const BotonPE = styled.button`
 }
 `;
 
+/*
+export const NotFound = styled.body`
 
-
-
-
-
-
-
-const desktopStartWidth = 996;
-
-const mobile = `@media (max-width: ${desktopStartWidth}px)`;
-const desktop = `@media (min-width: ${desktopStartWidth}px)`;
-
-
-export const Cuadrado = styled.div`
-    width: 70px;
-    heigth: 70px;
-    background-color: black;
-
-    ${mobile} {
-        width: 50%;
-    }
-    ${desktop} {
-        width: 100%;
-    }
-
-    &:hover{
-        background-color: red;
-    }
+    display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
 `;
-export const Rectangulo = styled(Cuadrado)`
-    width: 150px;
-`;
+*/
 
-export const Component = styled.div`
-    background-color: ${({isRigth}) => isRigth ? 'blue' : 'green'};
-`
-
-export const Input = styled.input.attrs(props => ({
-    type: "password",
-    maxLength: props.maxLength || 5, 
-}))`
-color: black;
-`;
-
-const BigText = css`
-    font-size: 3rem;
-`;
-
-export const RedText = styled.p`
-    background-color: red;
-    ${BigText};
-`;
-
-export const BlueText = styled.p`
-    background: blue;
-    ${BigText};
-`;
-
-
-/*style={{ width: '18rem', margin: '5rem' }}*/
 
 
 

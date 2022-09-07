@@ -11,9 +11,9 @@ export const Favorites = ({item}) => {
     return (
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', padding: '1.5rem', marginLeft: '-5rem'}}>
             <img src={item.imagen} alt={item.nombre} style={{width: '170px', height: '150px'}}/>
-            <span>{item.nombre}</span>
-            <span>${item.precio}</span>
-            <span>{item.cantidad}</span>
+            <span style={{ fontFamily: 'Roboto Condensed'}}>{item.nombre}</span>
+            <span style={{ fontFamily: 'Roboto Condensed'}}>${item.precio}</span>
+            <span style={{ fontFamily: 'Roboto Condensed'}}>{item.cantidad}</span>
             <button className='btn btn-dark' onClick={()=>removerProdFav(item.id)}><FaRegTimesCircle style={{ fontSize: '1.5em'}}/> </button>
         </div>
     )

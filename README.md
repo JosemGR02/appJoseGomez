@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Video Proyecto
+
+-seleccion de productos
+-seleccion de categorias
+-carrito de compras
+-finalizacion compra
+-falto favoritos
+
+![](/video%20proyecto.gif)
+
+## Implementaciones
+
+https://github.com/JosemGR02/appJoseGomez.git
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -12,9 +12,9 @@ const Item = ({ producto }) => {
         <div className="card" style={{ width: '16rem', margin: '2rem', marginTop: '12rem', marginBottom: '-2rem'}}>
             <img style={{ width: '16rem', height: '18rem'}} src={imagen} className="card-img-top" alt={nombre} />
             <div className="card-body">
-                <p className="card-text">{nombre}</p>
-                <p className="card-text">{descripcion}</p>
-                <p className="card-text">${precio}</p>
+                <p className="card-text" style={{ fontFamily: 'Roboto Condensed'}}>{nombre}</p>
+                <p className="card-text" style={{ fontFamily: 'Roboto Condensed'}}>{descripcion}</p>
+                <p className="card-text" style={{ fontFamily: 'Roboto Condensed'}}>${precio}</p>
             </div>
             <button className='btn btn-primary' onClick={() => navegar(`/detalle/${producto.id}`)}>Ver mas</button>
         </div>

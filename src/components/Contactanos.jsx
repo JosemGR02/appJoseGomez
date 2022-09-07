@@ -11,44 +11,27 @@ export function Contactanos(){
     return (
         <>
             <div>
-                <h1 class="text-center h2 mt-6" style={{marginTop: '40px', marginBottom: '60px'}}>Formulario contacto</h1>
+                <h1 class="text-center h2 mt-6" style={{marginTop: '40px', marginBottom: '60px', fontFamily: 'Tiro Devanagari Hindi'}}>Formulario contacto</h1>
             </div>
             <Form>
                 <Form.Group className="mb-3" controlId="inputName">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text"/>
-                    <Form.Text className="text-muted">
-                        nombre.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="inputSurname">
                     <Form.Label>Apellido</Form.Label>
                     <Form.Control type="text"/>
-                    <Form.Text className="text-muted">
-                        apellido.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="inputEmail">
                     <Form.Label>Correo electronico</Form.Label>
                     <Form.Control type="email" placeholder="name@example.com" />
-                    <Form.Text className="text-muted">
-                        Hola como andas.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="inputPhone">
                     <Form.Label>Telefono</Form.Label>
                     <Form.Control type="text"/>
-                    <Form.Text className="text-muted">
-                        telefono.
-                    </Form.Text>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password"/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -61,7 +44,7 @@ export function Contactanos(){
                 </Button>
             </Form>
             <div>
-                <h2 class="text-center h2 mt-6">Encontranos en nuestra sucursal</h2>
+                <h2 class="text-center h2 mt-6" style={{fontFamily: 'Tiro Devanagari Hindi'}}>Encontranos en nuestra sucursal</h2>
             </div> 
             <div style={{display: 'flex', flexDirection: 'wrap', justifyContent: 'center', marginTop: '40px', marginBottom: '30px'}}>
                 <iframe  style={{alignItems: 'center', justifyContent: 'center', height: '1000', width: '850' }} src="https://www.google.de/maps/place/Monumento+hist%C3%B3rico+nacional+a+la+Bandera/@-32.948224,-60.6797824,14z/data=!4m5!3m4!1s0x95b7ab1dc9b6d36f:0x97b9e9584d94d851!8m2!3d-32.9477132!4d-60.6304658?hl=de">
@@ -75,7 +58,7 @@ export function Contactanos(){
             </div>
             
             <div>
-                <h2 class="text-center h2 mt-6" style={{marginTop: '40px', marginBottom: '60px'}}>Sobre nosotros</h2>
+                <h2 class="text-center h2 mt-6" style={{marginTop: '40px', marginBottom: '60px', fontFamily: 'Tiro Devanagari Hindi'}}>Sobre nosotros</h2>
             </div>
             <div>
                 <div style={{display: 'flex', justifyContent: 'center',marginTop: '40px', marginBottom: '60px'}}>
@@ -95,3 +78,10 @@ export function Contactanos(){
 }
 
 export default Contactanos
+
+
+
+/*                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password"/>
+                </Form.Group> */
